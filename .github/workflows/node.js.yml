@@ -25,6 +25,9 @@ jobs:
     - name: test
       run: yarn test
 
+    - name: install git
+      run: apt-get install git
+
     - name: global git config
       run:  |
         git config --global user.email "xuan136371773@gmail.com"
