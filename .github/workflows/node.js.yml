@@ -16,10 +16,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - name: yarn install, build, test
+    - name: yarn install, build
       run: |
         yarn install
         yarn run build --if-present
-        yarn test
+    - name: test
+      run: yarn test
+    - name: deploy
+      run: yarn deploy 
       env:
         CI: true
