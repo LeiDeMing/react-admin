@@ -25,14 +25,11 @@ jobs:
     - name: test
       run: yarn test
 
-    - name: git user
+    - name: global git config
       run:  |
         git config --global user.email "xuan136371773@gmail.com"
-    
-    - name: git email
-      run:  |
         git config --global user.name "NeiDeMing"
-
+        
     - name: deploy
       run: yarn deploy 
       env:
