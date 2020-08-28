@@ -16,12 +16,20 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+
     - name: yarn install, build
       run: |
         yarn install
         yarn run build --if-present
+
     - name: test
       run: yarn test
+
+    - name: global git config
+      run:  |
+        git config --global user.email "xuan136371773@gmail.com"
+        git config --global user.name "NeiDeMing"
+        
     - name: deploy
       run: yarn deploy 
       env:
