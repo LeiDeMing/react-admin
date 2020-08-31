@@ -29,7 +29,7 @@ jobs:
       run:  |
         git config --global user.email "xuan136371773@gmail.com"
         git config --global user.name "NeiDeMing"
-        git remote set-url origin https://NeiDeMing:${{ secrets.git }}@github.com/NeiDeMing/react-admin-template.git
+        git remote set-url origin git@github.com:LeiDeMing/react-admin-template.git
         
     - name: deploy
       run: yarn deploy 
