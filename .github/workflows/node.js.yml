@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
@@ -29,7 +29,6 @@ jobs:
       run:  |
         git config --global user.email "xuan136371773@gmail.com"
         git config --global user.name "NeiDeMing"
-        git config --global credential.helper wincred
         
     - name: deploy
       run: yarn deploy 
