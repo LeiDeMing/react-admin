@@ -27,8 +27,8 @@ jobs:
 
     - name: global git config
       run:  |
-        git config --global user.email ${{git.email}}
-        git config --global user.name ${{git.name}}
+        git config --global user.email "xuan136371773@gmail.com"
+        git config --global user.name "NeiDeMing"
         
     - name: deploy
       run: yarn deploy 
