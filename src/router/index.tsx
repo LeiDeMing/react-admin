@@ -1,15 +1,21 @@
 import React, { Suspense } from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routes from './routes'
+console.log(routes)
+const RouterWrap = (props: any) => {
 
-const routerWrap = () => {
+    return (
+        <HashRouter>
+            <Suspense fallback={<div>loading</div>}>
+                <Switch>
+                    {
+                        routes.map(item => <Route path={item.path} component={item.component}></Route>)
+                    }
+                </Switch>
+            </Suspense>
 
-    return <HashRouter>
-        <Suspense fallback={<div>loading</div>}>
-            <Switch>
-
-            </Switch>
-        </Suspense>
-
-    </HashRouter >
+        </HashRouter >
+    )
 }
+
+export default RouterWrap
