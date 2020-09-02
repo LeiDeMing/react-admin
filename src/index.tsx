@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import RouterWrap from './router'
+import 'antd/dist/antd.css';
+import './global.scss'
 
 ReactDOM.render(
   <React.StrictMode>
