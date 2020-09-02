@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import routes from './routes'
 
 interface RouterItem {
