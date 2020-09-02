@@ -1,0 +1,1 @@
+{"version":3,"sources":["global.scss"],"names":[],"mappings":"AAAA,WAEI,WAAY,CACZ,eAAgB,CAChB,oEAAwE","file":"main.feced1cc.chunk.css","sourcesContent":["html,\n#root {\n    height: 100%;\n    overflow: hidden;\n    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);\n}"]}

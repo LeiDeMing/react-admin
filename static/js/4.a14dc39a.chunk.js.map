@@ -1,0 +1,1 @@
+{"version":3,"sources":["layouts/BasicLayout/index.tsx"],"names":["BasicLayout"],"mappings":"mIAAA,2BASeA,UAPK,WAEhB,OAAO","file":"static/js/4.a14dc39a.chunk.js","sourcesContent":["import React from \"react\"\n\nconst BasicLayout = () => {\n\n    return <div>\n        BasicLayout\n    </div>\n}\n\nexport default BasicLayout"],"sourceRoot":""}
