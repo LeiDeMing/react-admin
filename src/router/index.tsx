@@ -2,10 +2,10 @@ import React, { Suspense } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import routes from './routes'
 
-interface RouterItem {
-    path: string,
-    component: React.LazyExoticComponent<any>,
-    children: Array<Object>
+export interface RouterItem {
+    path?: string,
+    component?: React.LazyExoticComponent<any>,
+    children?: Array<Object>
 
 }
 
@@ -17,7 +17,11 @@ const RouterWrap = () => {
                 <Switch>
                     {
                         routes.map((item: RouterItem, index) => {
-                            return <Route _self_children={item.children} key={index} path={item.path} component={item.component}></Route>
+                            const Component = item.component
+                            if (!Component) return ''
+                            return <Route key={index} path={item.path}
+                                render={routeProps => <Component __child__={item.children} {...routeProps}></Component>}
+                            ></Route>
                         })
                     }
                     {/* <Redirect to='/user/login' /> */}

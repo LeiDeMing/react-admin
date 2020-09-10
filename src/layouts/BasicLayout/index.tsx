@@ -1,6 +1,6 @@
 import React from "react"
 
-const BasicLayout = () => {
+const BasicLayout: React.FunctionComponent<any> = (): JSX.Element => {
 
     return <div>
         BasicLayout
