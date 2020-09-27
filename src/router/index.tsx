@@ -9,10 +9,12 @@ export interface RouterItem {
 
 }
 
-const RouterWrap = () => {
-
+const RouterWrap = (history: any) => {
+    let his: any = { hashHistory: {} }
+    if (history)
+        his.hashHistory = history
     return (
-        <HashRouter>
+        <HashRouter {...his}>
             <Suspense fallback={<div>loading</div>}>
                 <Switch>
                     {
