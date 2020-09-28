@@ -19,7 +19,7 @@ const Login: React.FC = (props): JSX.Element => {
     return <Form
         name="normal_login"
         className="login-form"
-        initialValues={{ remember: true }}
+        initialValues={{ username: 'nei', password: '123', remember: true }}
         onFinish={onFinish}
     >
         <Form.Item
@@ -43,7 +43,7 @@ const Login: React.FC = (props): JSX.Element => {
                 <Checkbox className={styles.white}>Remember me</Checkbox>
             </Form.Item>
 
-            <a className={`login-form-forgot ${styles.white}`} href="">
+            <a className={`login-form-forgot ${styles.white}`} href={window.location.href}>
                 Forgot password
         </a>
         </Form.Item>
@@ -52,7 +52,7 @@ const Login: React.FC = (props): JSX.Element => {
             <Button type="primary" htmlType="submit" className="login-form-button">
                 Log in
         </Button>
-        Or <a href="" className={styles.white}>register now!</a>
+        Or <a href={window.location.href} className={styles.white}>register now!</a>
         </Form.Item>
     </Form>
 }
