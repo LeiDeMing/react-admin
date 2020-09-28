@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/Login/index.tsx"],"names":["Login"],"mappings":"mIAAA,2BAQeA,UAND,WACV,OAAO","file":"static/js/5.ef39176e.chunk.js","sourcesContent":["import React from 'react'\n\nconst Login = () => {\n    return <div>\n        Login\n    </div>\n}\n\nexport default Login"],"sourceRoot":""}
