@@ -54,7 +54,7 @@ stars3:after {
 
 .text {
     position: fixed;
-    top: 50%;
+    top: calc(50% - 100px);
     left: 50%;
     transform: translateX(-50%);
     color: #fff;

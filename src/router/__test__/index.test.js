@@ -1,16 +1,28 @@
 import React from 'react';
-import { createMemoryHistory } from 'history';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import RouterWrap from '../index';
 
-const renderWidthRouter = () => {
-    const history = createMemoryHistory()
-    return {
-        ...render(RouterWrap(history))
-    }
-}
 
-test('should render the home page', () => {
-    const { container } = renderWidthRouter()
-    expect(container).not.toBeUndefined()
+describe('Layout', () => {
+    describe('router', () => {
+        let element;
+        beforeEach(() => {
+            element = <RouterWrap />
+        })
+
+        test('renders as expected', () => {
+            const component = shallow(element);
+            expect(component).toMatchSnapshot();
+        })
+
+        test('routes /user', () => {
+            const component = shallow(element)
+            expect(component.find('Route[path="/user"]').first().props('component')).not.toBeUndefined();
+        })
+
+        test('routes /', () => {
+            const component = shallow(element)
+            expect(component.find('Route[path="/"]').first().props('component')).not.toBeUndefined();
+        })
+    })
 })
